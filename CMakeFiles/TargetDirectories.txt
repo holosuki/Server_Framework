@@ -1,0 +1,4 @@
+/home/holo/git/Server_Framework/CMakeFiles/edit_cache.dir
+/home/holo/git/Server_Framework/CMakeFiles/test.dir
+/home/holo/git/Server_Framework/CMakeFiles/rebuild_cache.dir
+/home/holo/git/Server_Framework/CMakeFiles/MSF.dir
