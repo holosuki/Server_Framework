@@ -17,7 +17,8 @@ class Logger;
 class LogEvent {
 public:
 	typedef std::shared_ptr<LogEvent> ptr;
-	LogEvent();
+	LogEvent(const char* file, int32_t line, int32_t elapse,
+			uint32_t thread_id, uint32_t fiber_id, uint64_t time);
 
 	const char* getFile() const { return m_file;}
 	int32_t getLine() const { return m_line;}
@@ -25,8 +26,9 @@ public:
 	uint32_t getThreadId() const { return m_threadId;}
 	uint32_t getFiberId() const { return m_fiberId;}
 	uint64_t getTime() const { return m_time;}
-	const std::string& getContent() const { return m_content;}
+	std::string getContent() const { return m_ss.str();}
 
+	std::stringstream& getSS() { return m_ss;}
 private:
 	const char* m_file = nullptr;		//文件名
 	int32_t m_line = 0;					//行号
@@ -34,7 +36,7 @@ private:
 	uint32_t m_threadId = 0;			//线程id
 	uint32_t m_fiberId = 0;				//协程id
 	uint64_t m_time = 0;				//时间戳
-	std::string m_content;
+	std::stringstream m_ss;
 };
 
 //日志事件级别
@@ -59,13 +61,13 @@ public:
 	LogFormatter(const std::string& pattern);
 	//%t	%thread_id %m%n,比方，反正按照某种模式
 	std::string format(std::shared_ptr<Logger> logger, LogLevel::Level level,LogEvent::ptr event);
-
+	std::ostream& format(std::ostream& ofs, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
 public:
 	class FormatItem {
 	public:
 		typedef std::shared_ptr<FormatItem> ptr;
 		virtual ~FormatItem() {}
-		virtual void format(std::ofstream& os, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
+		virtual void format(std::ostream& os, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
 	};
 
 	void init();
@@ -77,7 +79,7 @@ private:
 //日志输出地
 class LogAppender {
 public:
-	typedef std::shared_ptr<LogFormatter> ptr;
+	typedef std::shared_ptr<LogAppender> ptr;
 	virtual ~LogAppender() {}
 	virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level,LogEvent::ptr event) = 0;
 	void setFormatter(LogFormatter::ptr val) { m_formatter = val;}
@@ -106,11 +108,12 @@ public:
 	LogLevel::Level getLevel() const { return m_level;}
 	void setLevel(LogLevel::Level val) { m_level = val;}
 
-	const std::string& getNme() const { return m_name;}
+	const std::string& getName() const { return m_name;}
 private:
 	std::string m_name;						//日志名称
 	LogLevel::Level m_level;				//日志级别
 	std::list<LogAppender::ptr> m_appender;	//Appender集合
+	LogFormatter::ptr m_formatter;
 };
 
 //输出到控制台的Appender

@@ -6,5 +6,5 @@ CXX_DEFINES = -DMSF_EXPORTS
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -fPIC
+CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -fPIC
 
