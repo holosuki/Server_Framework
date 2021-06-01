@@ -9,6 +9,9 @@
 #include<sstream>
 #include<fstream>
 #include<vector>
+#include<stdarg.h>
+#include<map>
+#include"singleton.h"
 
 #define MSF_LOG_LEVEL(logger,level) \
 	if(logger->getLevel() <= level) \
@@ -21,6 +24,18 @@
 #define MSF_LOG_WARN(logger) MSF_LOG_LEVEL(logger, MSF::LogLevel::WARN)
 #define MSF_LOG_ERROR(logger) MSF_LOG_LEVEL(logger, MSF::LogLevel::ERROR)
 #define MSF_LOG_FATAL(logger) MSF_LOG_LEVEL(logger, MSF::LogLevel::FATAL)
+
+#define MSF_LOG_FMT_LEVEL(logger, level, fmt, ...) \
+	if(logger->getLevel() <= level) \
+		MSF::LogEventWrap(MSF::LogEvent::ptr(new MSF::LogEvent(logger, level, \
+						__FILE__, __LINE__, 0, MSF::GetThreadId(), \
+						MSF::GetFiberId(), time(0)))).getEvent()->format(fmt, __VA_ARGS__)
+
+#define MSF_LOG_FMT_DEBUG(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::DEBUG, fmt, __VA_ARGS__)
+#define MSF_LOG_FMT_INFO(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::INFO, fmt, __VA_ARGS__)
+#define MSF_LOG_FMT_WARN(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::WARN, fmt, __VA_ARGS__)
+#define MSF_LOG_FMT_ERROR(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::ERROR, fmt, __VA_ARGS__)
+#define MSF_LOG_FMT_FATAL(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::FATAL, fmt, __VA_ARGS__)
 
 namespace MSF {
 
@@ -60,6 +75,8 @@ public:
 	LogLevel::Level getLevel() const { return m_level;}
 
 	std::stringstream& getSS() { return m_ss;}
+	void format(const char* fmt,...);
+	void format(const char* fmt,va_list al);
 private:
 	const char* m_file = nullptr;		//文件名
 	int32_t m_line = 0;					//行号
@@ -77,7 +94,7 @@ class LogEventWrap {
 public:
 	LogEventWrap(LogEvent::ptr e);
 	~LogEventWrap();
-
+	LogEvent::ptr getEvent() const { return m_event;}
 	std::stringstream& getSS();
 private:
 	LogEvent::ptr m_event;
@@ -113,6 +130,8 @@ public:
 	virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level,LogEvent::ptr event) = 0;
 	void setFormatter(LogFormatter::ptr val) { m_formatter = val;}
 	LogFormatter::ptr getFormatter() const { return m_formatter;}
+	LogLevel::Level getLevel() const { return m_level;}
+	void setLevel(LogLevel::Level val) { m_level = val;}
 protected:
 	LogLevel::Level m_level;
 	LogFormatter::ptr m_formatter;
@@ -165,6 +184,20 @@ private:
 	std::string m_filename;
 	std::ofstream m_filestream;
 };
+
+class LoggerManager {
+public:
+	LoggerManager();
+	Logger::ptr getLogger(const std::string& name);
+
+	void init();
+
+private:
+	std::map<std::string, Logger::ptr> m_loggers;
+	Logger::ptr m_root;
+};
+
+typedef MSF::Singleton<LoggerManager> LoggerMgr;
 
 }
 

@@ -122,7 +122,11 @@ CMakeFiles/test.dir/tests/test.cc.o: \
  /usr/include/c++/4.8.2/bits/fstream.tcc /usr/include/c++/4.8.2/vector \
  /usr/include/c++/4.8.2/bits/stl_vector.h \
  /usr/include/c++/4.8.2/bits/stl_bvector.h \
- /usr/include/c++/4.8.2/bits/vector.tcc \
+ /usr/include/c++/4.8.2/bits/vector.tcc /usr/include/c++/4.8.2/map \
+ /usr/include/c++/4.8.2/bits/stl_tree.h \
+ /usr/include/c++/4.8.2/bits/stl_map.h \
+ /usr/include/c++/4.8.2/bits/stl_multimap.h \
+ /home/holo/git/Server_Framework/tests/../MSF/singleton.h \
  /home/holo/git/Server_Framework/tests/../MSF/util.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
