@@ -6,6 +6,7 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-de
 
 set(LIB_SRC
 	MSF/log.cc
+	MSF/util.cc
 	)
 
 add_library(MSF SHARED ${LIB_SRC})

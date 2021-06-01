@@ -170,6 +170,61 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/include/c++/4.8.2/bits/stl_multimap.h \
   /usr/include/string.h
 
+CMakeFiles/MSF.dir/MSF/util.cc.o: MSF/util.cc \
+  /usr/include/stdc-predef.h \
+  MSF/util.h \
+  /usr/include/pthread.h \
+  /usr/include/features.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/endian.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/byteswap-16.h \
+  /usr/include/sched.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+  /usr/include/time.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/timex.h \
+  /usr/include/xlocale.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h \
+  /usr/include/bits/environments.h \
+  /usr/include/bits/confname.h \
+  /usr/include/getopt.h \
+  /usr/include/sys/types.h \
+  /usr/include/sys/select.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h \
+  /usr/include/sys/sysmacros.h \
+  /usr/include/sys/syscall.h \
+  /usr/include/asm/unistd.h \
+  /usr/include/asm/unistd_64.h \
+  /usr/include/bits/syscall.h \
+  /usr/include/stdio.h \
+  /usr/include/libio.h \
+  /usr/include/_G_config.h \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/sys_errlist.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/bits/wchar.h
+
+
+/usr/include/bits/confname.h:
+
+/usr/include/unistd.h:
+
+MSF/util.h:
 
 /usr/include/c++/4.8.2/bits/stl_vector.h:
 
@@ -180,6 +235,8 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
 /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/basic_file.h:
 
 /usr/include/c++/4.8.2/bits/sstream.tcc:
+
+/usr/include/asm/unistd_64.h:
 
 /usr/include/c++/4.8.2/bits/stl_list.h:
 
@@ -224,6 +281,8 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
 /usr/include/c++/4.8.2/bits/basic_ios.tcc:
 
 /usr/include/c++/4.8.2/cwctype:
+
+MSF/util.cc:
 
 /usr/include/c++/4.8.2/utility:
 
@@ -353,6 +412,8 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
 
 /usr/include/stdc-predef.h:
 
+/usr/include/asm/unistd.h:
+
 /usr/include/bits/sigset.h:
 
 MSF/log.cc:
@@ -360,6 +421,8 @@ MSF/log.cc:
 /usr/include/stdlib.h:
 
 /usr/include/c++/4.8.2/bits/functexcept.h:
+
+/usr/include/getopt.h:
 
 /usr/include/c++/4.8.2/ostream:
 
@@ -408,6 +471,8 @@ MSF/log.cc:
 /usr/include/c++/4.8.2/iosfwd:
 
 /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/gthr.h:
+
+/usr/include/bits/syscall.h:
 
 /usr/include/c++/4.8.2/clocale:
 
@@ -471,7 +536,11 @@ MSF/log.cc:
 
 /usr/include/bits/time.h:
 
+/usr/include/sys/syscall.h:
+
 /usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/environments.h:
 
 /usr/include/c++/4.8.2/bits/locale_classes.h:
 
@@ -488,6 +557,8 @@ MSF/log.cc:
 /usr/include/c++/4.8.2/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/4.8.2/ext/new_allocator.h:
+
+/usr/include/bits/posix_opt.h:
 
 /usr/include/c++/4.8.2/new:
 

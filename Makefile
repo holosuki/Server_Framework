@@ -169,6 +169,30 @@ MSF/log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/log.cc.s
 .PHONY : MSF/log.cc.s
 
+MSF/util.o: MSF/util.cc.o
+.PHONY : MSF/util.o
+
+# target to build an object file
+MSF/util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/util.cc.o
+.PHONY : MSF/util.cc.o
+
+MSF/util.i: MSF/util.cc.i
+.PHONY : MSF/util.i
+
+# target to preprocess a source file
+MSF/util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/util.cc.i
+.PHONY : MSF/util.cc.i
+
+MSF/util.s: MSF/util.cc.s
+.PHONY : MSF/util.s
+
+# target to generate assembly for a file
+MSF/util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/util.cc.s
+.PHONY : MSF/util.cc.s
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -206,6 +230,9 @@ help:
 	@echo "... MSF/log.o"
 	@echo "... MSF/log.i"
 	@echo "... MSF/log.s"
+	@echo "... MSF/util.o"
+	@echo "... MSF/util.i"
+	@echo "... MSF/util.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
