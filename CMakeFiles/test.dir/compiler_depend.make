@@ -169,6 +169,10 @@ CMakeFiles/test.dir/tests/test.cc.o: tests/test.cc \
   /usr/include/c++/4.8.2/bits/stl_vector.h \
   /usr/include/c++/4.8.2/bits/stl_bvector.h \
   /usr/include/c++/4.8.2/bits/vector.tcc \
+  /usr/include/c++/4.8.2/map \
+  /usr/include/c++/4.8.2/bits/stl_tree.h \
+  /usr/include/c++/4.8.2/bits/stl_map.h \
+  /usr/include/c++/4.8.2/bits/stl_multimap.h \
   MSF/util.h \
   /usr/include/unistd.h \
   /usr/include/bits/posix_opt.h \
@@ -178,7 +182,9 @@ CMakeFiles/test.dir/tests/test.cc.o: tests/test.cc \
   /usr/include/sys/syscall.h \
   /usr/include/asm/unistd.h \
   /usr/include/asm/unistd_64.h \
-  /usr/include/bits/syscall.h
+  /usr/include/bits/syscall.h \
+  MSF/singleton.h \
+  MSF/util.h
 
 
 /usr/include/bits/confname.h:
@@ -219,6 +225,8 @@ MSF/util.h:
 
 /usr/include/c++/4.8.2/memory:
 
+MSF/singleton.h:
+
 /usr/include/c++/4.8.2/bits/uses_allocator.h:
 
 /usr/include/c++/4.8.2/stdexcept:
@@ -234,6 +242,8 @@ MSF/util.h:
 /usr/include/c++/4.8.2/limits:
 
 /usr/include/c++/4.8.2/chrono:
+
+/usr/include/c++/4.8.2/bits/stl_tree.h:
 
 /usr/include/c++/4.8.2/bits/istream.tcc:
 
@@ -393,7 +403,11 @@ tests/test.cc:
 
 /usr/include/c++/4.8.2/bits/exception_ptr.h:
 
+/usr/include/c++/4.8.2/bits/stl_multimap.h:
+
 /usr/include/c++/4.8.2/bits/stringfwd.h:
+
+/usr/include/c++/4.8.2/bits/stl_map.h:
 
 /usr/include/bits/locale.h:
 
@@ -520,6 +534,8 @@ tests/test.cc:
 /usr/include/bits/posix_opt.h:
 
 /usr/include/c++/4.8.2/new:
+
+/usr/include/c++/4.8.2/map:
 
 /usr/include/c++/4.8.2/ext/type_traits.h:
 

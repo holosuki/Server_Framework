@@ -225,6 +225,9 @@ MSF_BINARY_DIR:STATIC=/home/holo/git/Server_Framework
 //Value Computed by CMake
 MSF_SOURCE_DIR:STATIC=/home/holo/git/Server_Framework
 
+//Path to a library.
+YAMLCPP:FILEPATH=/usr/local/lib64/libyaml-cpp.a
+
 
 ########################
 # INTERNAL cache entries

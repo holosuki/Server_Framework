@@ -126,10 +126,11 @@ CMakeFiles/test.dir/tests/test.cc.o: \
  /usr/include/c++/4.8.2/bits/stl_tree.h \
  /usr/include/c++/4.8.2/bits/stl_map.h \
  /usr/include/c++/4.8.2/bits/stl_multimap.h \
- /home/holo/git/Server_Framework/tests/../MSF/singleton.h \
  /home/holo/git/Server_Framework/tests/../MSF/util.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/getopt.h /usr/include/sys/syscall.h \
  /usr/include/asm/unistd.h /usr/include/asm/unistd_64.h \
- /usr/include/bits/syscall.h
+ /usr/include/bits/syscall.h \
+ /home/holo/git/Server_Framework/tests/../MSF/singleton.h \
+ /home/holo/git/Server_Framework/tests/../MSF/util.h

@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/holo/git/Server_Framework
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/test_config.dir/all
 all: CMakeFiles/test.dir/all
 all: CMakeFiles/MSF.dir/all
 .PHONY : all
@@ -75,9 +76,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/test_config.dir/clean
 clean: CMakeFiles/test.dir/clean
 clean: CMakeFiles/MSF.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_config.dir
+
+# All Build rule for target.
+CMakeFiles/test_config.dir/all: CMakeFiles/MSF.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=7,8 "Built target test_config"
+.PHONY : CMakeFiles/test_config.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_config.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_config.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 0
+.PHONY : CMakeFiles/test_config.dir/rule
+
+# Convenience name for target.
+test_config: CMakeFiles/test_config.dir/rule
+.PHONY : test_config
+
+# clean rule for target.
+CMakeFiles/test_config.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/clean
+.PHONY : CMakeFiles/test_config.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/test.dir
@@ -86,12 +114,12 @@ clean: CMakeFiles/MSF.dir/clean
 CMakeFiles/test.dir/all: CMakeFiles/MSF.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=4,5 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=5,6 "Built target test"
 .PHONY : CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
@@ -112,12 +140,12 @@ CMakeFiles/test.dir/clean:
 CMakeFiles/MSF.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=1,2,3 "Built target MSF"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=1,2,3,4 "Built target MSF"
 .PHONY : CMakeFiles/MSF.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MSF.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MSF.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/holo/git/Server_Framework/CMakeFiles 0
 .PHONY : CMakeFiles/MSF.dir/rule

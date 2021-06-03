@@ -11,7 +11,9 @@
 #include<vector>
 #include<stdarg.h>
 #include<map>
+#include "util.h"
 #include"singleton.h"
+
 
 #define MSF_LOG_LEVEL(logger,level) \
 	if(logger->getLevel() <= level) \
@@ -36,6 +38,8 @@
 #define MSF_LOG_FMT_WARN(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::WARN, fmt, __VA_ARGS__)
 #define MSF_LOG_FMT_ERROR(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::ERROR, fmt, __VA_ARGS__)
 #define MSF_LOG_FMT_FATAL(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::FATAL, fmt, __VA_ARGS__)
+
+#define MSF_LOG_ROOT() MSF::LoggerMgr::GetInstance()->getRoot()
 
 namespace MSF {
 
@@ -191,7 +195,7 @@ public:
 	Logger::ptr getLogger(const std::string& name);
 
 	void init();
-
+	Logger::ptr getRoot() const { return m_root;}
 private:
 	std::map<std::string, Logger::ptr> m_loggers;
 	Logger::ptr m_root;
