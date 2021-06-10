@@ -54,7 +54,7 @@ void printf_yaml(const YAML::Node& node, int level) {
 }
 
 void test_yaml() {
-	YAML::Node root = YAML::LoadFile("/home/holo/git/Server_Framework/bin/conf/log.yml");
+	YAML::Node root = YAML::LoadFile("/home/holo/git/Server_Framework/bin/conf/test.yml");
 	printf_yaml(root, 0);
 	MSF_LOG_INFO(MSF_LOG_ROOT()) << root.Scalar();
 }
@@ -91,7 +91,7 @@ void test_config() {
     XX_M(g_str_int_map_value_config, str_int_map, before);
     XX_M(g_str_int_umap_value_config, str_int_umap, before);
 
-    YAML::Node root = YAML::LoadFile("/home/holo/git/Server_Framework/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/home/holo/git/Server_Framework/bin/conf/test.yml");
     MSF::Config::LoadFromYaml(root);
 
     MSF_LOG_INFO(MSF_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
@@ -180,10 +180,10 @@ void test_class() {
         MSF_LOG_INFO(MSF_LOG_ROOT()) <<  prefix << ": size=" << m.size(); \
     }
 
-    /*g_person->addListener([](const Person& old_value, const Person& new_value){
+    g_person->addListener(10,[](const Person& old_value, const Person& new_value){
         MSF_LOG_INFO(MSF_LOG_ROOT()) << "old_value=" << old_value.toString()
                 << " new_value=" << new_value.toString();
-    });*/
+    });
 
     XX_PM(g_person_map, "class.map before");
     MSF_LOG_INFO(MSF_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
@@ -196,10 +196,23 @@ void test_class() {
     MSF_LOG_INFO(MSF_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
 }
 
+void test_log() {
+	static MSF::Logger::ptr system_log = MSF_LOG_NAME("system");
+	MSF_LOG_INFO(system_log) << "hello system" << std::endl;
+	std::cout << MSF::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+	YAML::Node root = YAML::LoadFile("/home/holo/git/Server_Framework/bin/conf/log.yml");
+	MSF::Config::LoadFromYaml(root);
+	std::cout << "=================" << std::endl;
+	std::cout << MSF::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+	std::cout << "=================" << std::endl;
+	std::cout << root << std::endl;
+	MSF_LOG_INFO(system_log) << "hello system" << std::endl;
+ }
 
 int main(int argc, char** argv) {
 	//test_yaml();
 	//test_config();
-	test_class();
+	//test_class();
+	test_log();
 	return 0;
 }
