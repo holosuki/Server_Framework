@@ -4,7 +4,13 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DMSF_EXPORTS
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/holo/git/Server_Framework/.
 
-CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -fPIC
+CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -fPIC
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/log.cc.o_DEFINES = __FILE__="MSF/log.cc"
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/util.cc.o_DEFINES = __FILE__="MSF/util.cc"
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/config.cc.o_DEFINES = __FILE__="MSF/config.cc"
 

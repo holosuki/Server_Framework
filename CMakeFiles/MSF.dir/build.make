@@ -76,43 +76,43 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: CMakeFiles/MSF.dir/flags.make
 CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc
 CMakeFiles/MSF.dir/MSF/log.cc.o: CMakeFiles/MSF.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MSF.dir/MSF/log.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/log.cc.o -MF CMakeFiles/MSF.dir/MSF/log.cc.o.d -o CMakeFiles/MSF.dir/MSF/log.cc.o -c /home/holo/git/Server_Framework/MSF/log.cc
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/log.cc.o -MF CMakeFiles/MSF.dir/MSF/log.cc.o.d -o CMakeFiles/MSF.dir/MSF/log.cc.o -c /home/holo/git/Server_Framework/MSF/log.cc
 
 CMakeFiles/MSF.dir/MSF/log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MSF.dir/MSF/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/log.cc > CMakeFiles/MSF.dir/MSF/log.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/log.cc > CMakeFiles/MSF.dir/MSF/log.cc.i
 
 CMakeFiles/MSF.dir/MSF/log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MSF.dir/MSF/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/log.cc -o CMakeFiles/MSF.dir/MSF/log.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/log.cc -o CMakeFiles/MSF.dir/MSF/log.cc.s
 
 CMakeFiles/MSF.dir/MSF/util.cc.o: CMakeFiles/MSF.dir/flags.make
 CMakeFiles/MSF.dir/MSF/util.cc.o: MSF/util.cc
 CMakeFiles/MSF.dir/MSF/util.cc.o: CMakeFiles/MSF.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MSF.dir/MSF/util.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/util.cc.o -MF CMakeFiles/MSF.dir/MSF/util.cc.o.d -o CMakeFiles/MSF.dir/MSF/util.cc.o -c /home/holo/git/Server_Framework/MSF/util.cc
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/util.cc.o -MF CMakeFiles/MSF.dir/MSF/util.cc.o.d -o CMakeFiles/MSF.dir/MSF/util.cc.o -c /home/holo/git/Server_Framework/MSF/util.cc
 
 CMakeFiles/MSF.dir/MSF/util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MSF.dir/MSF/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/util.cc > CMakeFiles/MSF.dir/MSF/util.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/util.cc > CMakeFiles/MSF.dir/MSF/util.cc.i
 
 CMakeFiles/MSF.dir/MSF/util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MSF.dir/MSF/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/util.cc -o CMakeFiles/MSF.dir/MSF/util.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/util.cc -o CMakeFiles/MSF.dir/MSF/util.cc.s
 
 CMakeFiles/MSF.dir/MSF/config.cc.o: CMakeFiles/MSF.dir/flags.make
 CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc
 CMakeFiles/MSF.dir/MSF/config.cc.o: CMakeFiles/MSF.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/holo/git/Server_Framework/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MSF.dir/MSF/config.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/config.cc.o -MF CMakeFiles/MSF.dir/MSF/config.cc.o.d -o CMakeFiles/MSF.dir/MSF/config.cc.o -c /home/holo/git/Server_Framework/MSF/config.cc
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MSF.dir/MSF/config.cc.o -MF CMakeFiles/MSF.dir/MSF/config.cc.o.d -o CMakeFiles/MSF.dir/MSF/config.cc.o -c /home/holo/git/Server_Framework/MSF/config.cc
 
 CMakeFiles/MSF.dir/MSF/config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MSF.dir/MSF/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/config.cc > CMakeFiles/MSF.dir/MSF/config.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/holo/git/Server_Framework/MSF/config.cc > CMakeFiles/MSF.dir/MSF/config.cc.i
 
 CMakeFiles/MSF.dir/MSF/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MSF.dir/MSF/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/config.cc -o CMakeFiles/MSF.dir/MSF/config.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"MSF/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/holo/git/Server_Framework/MSF/config.cc -o CMakeFiles/MSF.dir/MSF/config.cc.s
 
 # Object files for target MSF
 MSF_OBJECTS = \
