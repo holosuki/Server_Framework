@@ -133,6 +133,19 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -206,6 +219,30 @@ MSF/log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/log.cc.s
 .PHONY : MSF/log.cc.s
 
+MSF/thread.o: MSF/thread.cc.o
+.PHONY : MSF/thread.o
+
+# target to build an object file
+MSF/thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/thread.cc.o
+.PHONY : MSF/thread.cc.o
+
+MSF/thread.i: MSF/thread.cc.i
+.PHONY : MSF/thread.i
+
+# target to preprocess a source file
+MSF/thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/thread.cc.i
+.PHONY : MSF/thread.cc.i
+
+MSF/thread.s: MSF/thread.cc.s
+.PHONY : MSF/thread.s
+
+# target to generate assembly for a file
+MSF/thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/thread.cc.s
+.PHONY : MSF/thread.cc.s
+
 MSF/util.o: MSF/util.cc.o
 .PHONY : MSF/util.o
 
@@ -278,6 +315,30 @@ tests/test_config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
+tests/test_thread.o: tests/test_thread.cc.o
+.PHONY : tests/test_thread.o
+
+# target to build an object file
+tests/test_thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.o
+.PHONY : tests/test_thread.cc.o
+
+tests/test_thread.i: tests/test_thread.cc.i
+.PHONY : tests/test_thread.i
+
+# target to preprocess a source file
+tests/test_thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.i
+.PHONY : tests/test_thread.cc.i
+
+tests/test_thread.s: tests/test_thread.cc.s
+.PHONY : tests/test_thread.s
+
+# target to generate assembly for a file
+tests/test_thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
+.PHONY : tests/test_thread.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -289,12 +350,16 @@ help:
 	@echo "... MSF"
 	@echo "... test"
 	@echo "... test_config"
+	@echo "... test_thread"
 	@echo "... MSF/config.o"
 	@echo "... MSF/config.i"
 	@echo "... MSF/config.s"
 	@echo "... MSF/log.o"
 	@echo "... MSF/log.i"
 	@echo "... MSF/log.s"
+	@echo "... MSF/thread.o"
+	@echo "... MSF/thread.i"
+	@echo "... MSF/thread.s"
 	@echo "... MSF/util.o"
 	@echo "... MSF/util.i"
 	@echo "... MSF/util.s"
@@ -304,6 +369,9 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_thread.o"
+	@echo "... tests/test_thread.i"
+	@echo "... tests/test_thread.s"
 .PHONY : help
 
 
