@@ -764,8 +764,12 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: tests/test_thread.cc \
   MSF/thread.h \
   /usr/include/c++/4.8.2/thread \
   /usr/include/c++/4.8.2/chrono \
-  /usr/include/c++/4.8.2/ratio
+  /usr/include/c++/4.8.2/ratio \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h
 
+
+/usr/include/semaphore.h:
 
 /usr/include/c++/4.8.2/chrono:
 
@@ -1724,6 +1728,8 @@ tests/test_thread.cc:
 /usr/include/boost/functional/hash/hash_fwd.hpp:
 
 /usr/include/wctype.h:
+
+/usr/include/bits/semaphore.h:
 
 /usr/include/boost/mpl/prior.hpp:
 

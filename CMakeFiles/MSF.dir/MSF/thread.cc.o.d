@@ -96,8 +96,8 @@ CMakeFiles/MSF.dir/MSF/thread.cc.o: \
  /usr/include/c++/4.8.2/bits/unique_ptr.h \
  /usr/include/c++/4.8.2/bits/shared_ptr.h \
  /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
- /usr/include/c++/4.8.2/backward/auto_ptr.h \
- /home/holo/git/Server_Framework/MSF/log.h \
+ /usr/include/c++/4.8.2/backward/auto_ptr.h /usr/include/semaphore.h \
+ /usr/include/bits/semaphore.h /home/holo/git/Server_Framework/MSF/log.h \
  /usr/include/c++/4.8.2/iostream /usr/include/c++/4.8.2/ostream \
  /usr/include/c++/4.8.2/ios /usr/include/c++/4.8.2/bits/ios_base.h \
  /usr/include/c++/4.8.2/bits/locale_classes.h \

@@ -1655,6 +1655,8 @@ CMakeFiles/MSF.dir/MSF/thread.cc.o: MSF/thread.cc \
   /usr/include/c++/4.8.2/bits/shared_ptr.h \
   /usr/include/c++/4.8.2/bits/shared_ptr_base.h \
   /usr/include/c++/4.8.2/backward/auto_ptr.h \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h \
   MSF/log.h \
   /usr/include/c++/4.8.2/iostream \
   /usr/include/c++/4.8.2/ostream \
@@ -1755,6 +1757,8 @@ CMakeFiles/MSF.dir/MSF/util.cc.o: MSF/util.cc \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h
 
+
+/usr/include/semaphore.h:
 
 /usr/include/c++/4.8.2/chrono:
 
@@ -2717,6 +2721,8 @@ MSF/singleton.h:
 /usr/include/boost/functional/hash/hash_fwd.hpp:
 
 /usr/include/wctype.h:
+
+/usr/include/bits/semaphore.h:
 
 /usr/include/boost/mpl/prior.hpp:
 
