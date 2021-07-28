@@ -620,6 +620,12 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
  /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
  /home/holo/git/Server_Framework/tests/../MSF/singleton.h \
+ /home/holo/git/Server_Framework/tests/../MSF/thread.h \
+ /usr/include/c++/4.8.2/thread /usr/include/c++/4.8.2/chrono \
+ /usr/include/c++/4.8.2/ratio /usr/include/semaphore.h \
+ /usr/include/bits/semaphore.h /usr/include/c++/4.8.2/atomic \
+ /usr/include/c++/4.8.2/bits/atomic_base.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
  /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
  /usr/local/include/yaml-cpp/dll.h /usr/local/include/yaml-cpp/emitter.h \
  /usr/local/include/yaml-cpp/binary.h \
@@ -647,8 +653,6 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
  /usr/local/include/yaml-cpp/node/iterator.h \
  /usr/local/include/yaml-cpp/node/detail/iterator.h \
- /usr/include/c++/4.8.2/atomic /usr/include/c++/4.8.2/bits/atomic_base.h \
- /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
  /usr/local/include/yaml-cpp/node/convert.h \
  /usr/local/include/yaml-cpp/node/detail/impl.h \
  /usr/local/include/yaml-cpp/node/parse.h \

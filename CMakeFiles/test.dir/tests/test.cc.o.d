@@ -133,4 +133,8 @@ CMakeFiles/test.dir/tests/test.cc.o: \
  /usr/include/asm/unistd.h /usr/include/asm/unistd_64.h \
  /usr/include/bits/syscall.h \
  /home/holo/git/Server_Framework/tests/../MSF/singleton.h \
+ /home/holo/git/Server_Framework/tests/../MSF/thread.h \
+ /usr/include/semaphore.h /usr/include/bits/semaphore.h \
+ /usr/include/c++/4.8.2/atomic /usr/include/c++/4.8.2/bits/atomic_base.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
  /home/holo/git/Server_Framework/tests/../MSF/util.h

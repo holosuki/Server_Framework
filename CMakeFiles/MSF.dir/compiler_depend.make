@@ -717,6 +717,15 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/include/asm/unistd_64.h \
   /usr/include/bits/syscall.h \
   MSF/singleton.h \
+  MSF/thread.h \
+  /usr/include/c++/4.8.2/thread \
+  /usr/include/c++/4.8.2/chrono \
+  /usr/include/c++/4.8.2/ratio \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h \
+  /usr/include/c++/4.8.2/atomic \
+  /usr/include/c++/4.8.2/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/local/include/yaml-cpp/yaml.h \
   /usr/local/include/yaml-cpp/parser.h \
   /usr/local/include/yaml-cpp/dll.h \
@@ -747,9 +756,6 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
   /usr/local/include/yaml-cpp/node/iterator.h \
   /usr/local/include/yaml-cpp/node/detail/iterator.h \
-  /usr/include/c++/4.8.2/atomic \
-  /usr/include/c++/4.8.2/bits/atomic_base.h \
-  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/local/include/yaml-cpp/node/convert.h \
   /usr/local/include/yaml-cpp/node/detail/impl.h \
   /usr/local/include/yaml-cpp/node/parse.h \
@@ -939,6 +945,17 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/include/asm/unistd_64.h \
   /usr/include/bits/syscall.h \
   MSF/singleton.h \
+  MSF/thread.h \
+  /usr/include/c++/4.8.2/thread \
+  /usr/include/c++/4.8.2/chrono \
+  /usr/include/c++/4.8.2/ratio \
+  /usr/include/c++/4.8.2/limits \
+  /usr/include/c++/4.8.2/ctime \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h \
+  /usr/include/c++/4.8.2/atomic \
+  /usr/include/c++/4.8.2/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/include/string.h \
   MSF/config.h \
   /usr/include/boost/lexical_cast.hpp \
@@ -965,7 +982,6 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/include/bits/xopen_lim.h \
   /usr/include/c++/4.8.2/cstring \
   /usr/include/boost/limits.hpp \
-  /usr/include/c++/4.8.2/limits \
   /usr/include/boost/mpl/if.hpp \
   /usr/include/boost/mpl/aux_/value_wknd.hpp \
   /usr/include/boost/mpl/aux_/static_cast.hpp \
@@ -1085,7 +1101,6 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/include/boost/type_traits/is_volatile.hpp \
   /usr/include/c++/4.8.2/locale \
   /usr/include/c++/4.8.2/bits/locale_facets_nonio.h \
-  /usr/include/c++/4.8.2/ctime \
   /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/time_members.h \
   /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/messages_members.h \
   /usr/include/libintl.h \
@@ -1507,9 +1522,6 @@ CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
   /usr/local/include/yaml-cpp/node/iterator.h \
   /usr/local/include/yaml-cpp/node/detail/iterator.h \
-  /usr/include/c++/4.8.2/atomic \
-  /usr/include/c++/4.8.2/bits/atomic_base.h \
-  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/local/include/yaml-cpp/node/convert.h \
   /usr/local/include/yaml-cpp/node/detail/impl.h \
   /usr/local/include/yaml-cpp/node/parse.h \
@@ -1657,6 +1669,9 @@ CMakeFiles/MSF.dir/MSF/thread.cc.o: MSF/thread.cc \
   /usr/include/c++/4.8.2/backward/auto_ptr.h \
   /usr/include/semaphore.h \
   /usr/include/bits/semaphore.h \
+  /usr/include/c++/4.8.2/atomic \
+  /usr/include/c++/4.8.2/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   MSF/log.h \
   /usr/include/c++/4.8.2/iostream \
   /usr/include/c++/4.8.2/ostream \
@@ -1758,12 +1773,6 @@ CMakeFiles/MSF.dir/MSF/util.cc.o: MSF/util.cc \
   /usr/include/bits/wchar.h
 
 
-/usr/include/semaphore.h:
-
-/usr/include/c++/4.8.2/chrono:
-
-MSF/thread.h:
-
 MSF/thread.cc:
 
 /usr/include/c++/4.8.2/unordered_set:
@@ -1771,10 +1780,6 @@ MSF/thread.cc:
 /usr/include/c++/4.8.2/bits/hashtable.h:
 
 /usr/local/include/yaml-cpp/node/emit.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h:
-
-/usr/include/c++/4.8.2/bits/atomic_base.h:
 
 /usr/local/include/yaml-cpp/node/detail/node_ref.h:
 
@@ -1801,6 +1806,16 @@ MSF/thread.cc:
 /usr/local/include/yaml-cpp/parser.h:
 
 /usr/local/include/yaml-cpp/yaml.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h:
+
+/usr/include/c++/4.8.2/bits/atomic_base.h:
+
+/usr/include/semaphore.h:
+
+/usr/include/c++/4.8.2/chrono:
+
+MSF/thread.h:
 
 /usr/include/bits/syscall.h:
 

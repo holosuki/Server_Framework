@@ -184,8 +184,24 @@ CMakeFiles/test.dir/tests/test.cc.o: tests/test.cc \
   /usr/include/asm/unistd_64.h \
   /usr/include/bits/syscall.h \
   MSF/singleton.h \
+  MSF/thread.h \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h \
+  /usr/include/c++/4.8.2/atomic \
+  /usr/include/c++/4.8.2/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   MSF/util.h
 
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h:
+
+/usr/include/c++/4.8.2/atomic:
+
+/usr/include/bits/semaphore.h:
+
+/usr/include/semaphore.h:
+
+MSF/thread.h:
 
 /usr/include/bits/confname.h:
 
@@ -260,6 +276,8 @@ MSF/singleton.h:
 /usr/include/c++/4.8.2/fstream:
 
 /usr/include/c++/4.8.2/streambuf:
+
+/usr/include/c++/4.8.2/bits/atomic_base.h:
 
 /usr/include/c++/4.8.2/bits/functional_hash.h:
 
