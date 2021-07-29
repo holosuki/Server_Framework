@@ -699,33 +699,6 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/include/boost/range/detail/misc_concept.hpp \
   /usr/include/boost/range/detail/safe_bool.hpp \
   /usr/include/boost/container/container_fwd.hpp \
-  MSF/log.h \
-  /usr/include/c++/4.8.2/list \
-  /usr/include/c++/4.8.2/bits/stl_list.h \
-  /usr/include/c++/4.8.2/bits/list.tcc \
-  /usr/include/c++/4.8.2/fstream \
-  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/basic_file.h \
-  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/c++io.h \
-  /usr/include/c++/4.8.2/bits/fstream.tcc \
-  /usr/include/c++/4.8.2/map \
-  /usr/include/c++/4.8.2/bits/stl_tree.h \
-  /usr/include/c++/4.8.2/bits/stl_map.h \
-  /usr/include/c++/4.8.2/bits/stl_multimap.h \
-  MSF/util.h \
-  /usr/include/sys/syscall.h \
-  /usr/include/asm/unistd.h \
-  /usr/include/asm/unistd_64.h \
-  /usr/include/bits/syscall.h \
-  MSF/singleton.h \
-  MSF/thread.h \
-  /usr/include/c++/4.8.2/thread \
-  /usr/include/c++/4.8.2/chrono \
-  /usr/include/c++/4.8.2/ratio \
-  /usr/include/semaphore.h \
-  /usr/include/bits/semaphore.h \
-  /usr/include/c++/4.8.2/atomic \
-  /usr/include/c++/4.8.2/bits/atomic_base.h \
-  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/local/include/yaml-cpp/yaml.h \
   /usr/local/include/yaml-cpp/parser.h \
   /usr/local/include/yaml-cpp/dll.h \
@@ -737,9 +710,16 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/local/include/yaml-cpp/ostream_wrapper.h \
   /usr/local/include/yaml-cpp/emitterstyle.h \
   /usr/local/include/yaml-cpp/stlemitter.h \
+  /usr/include/c++/4.8.2/list \
+  /usr/include/c++/4.8.2/bits/stl_list.h \
+  /usr/include/c++/4.8.2/bits/list.tcc \
   /usr/include/c++/4.8.2/set \
+  /usr/include/c++/4.8.2/bits/stl_tree.h \
   /usr/include/c++/4.8.2/bits/stl_set.h \
   /usr/include/c++/4.8.2/bits/stl_multiset.h \
+  /usr/include/c++/4.8.2/map \
+  /usr/include/c++/4.8.2/bits/stl_map.h \
+  /usr/include/c++/4.8.2/bits/stl_multimap.h \
   /usr/local/include/yaml-cpp/exceptions.h \
   /usr/local/include/yaml-cpp/mark.h \
   /usr/local/include/yaml-cpp/noexcept.h \
@@ -756,6 +736,9 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
   /usr/local/include/yaml-cpp/node/iterator.h \
   /usr/local/include/yaml-cpp/node/detail/iterator.h \
+  /usr/include/c++/4.8.2/atomic \
+  /usr/include/c++/4.8.2/bits/atomic_base.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h \
   /usr/local/include/yaml-cpp/node/convert.h \
   /usr/local/include/yaml-cpp/node/detail/impl.h \
   /usr/local/include/yaml-cpp/node/parse.h \
@@ -765,7 +748,24 @@ CMakeFiles/MSF.dir/MSF/config.cc.o: MSF/config.cc \
   /usr/include/c++/4.8.2/bits/hashtable_policy.h \
   /usr/include/c++/4.8.2/bits/unordered_map.h \
   /usr/include/c++/4.8.2/unordered_set \
-  /usr/include/c++/4.8.2/bits/unordered_set.h
+  /usr/include/c++/4.8.2/bits/unordered_set.h \
+  MSF/thread.h \
+  /usr/include/c++/4.8.2/thread \
+  /usr/include/c++/4.8.2/chrono \
+  /usr/include/c++/4.8.2/ratio \
+  /usr/include/semaphore.h \
+  /usr/include/bits/semaphore.h \
+  MSF/log.h \
+  /usr/include/c++/4.8.2/fstream \
+  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/4.8.2/bits/fstream.tcc \
+  MSF/util.h \
+  /usr/include/sys/syscall.h \
+  /usr/include/asm/unistd.h \
+  /usr/include/asm/unistd_64.h \
+  /usr/include/bits/syscall.h \
+  MSF/singleton.h
 
 CMakeFiles/MSF.dir/MSF/log.cc.o: MSF/log.cc \
   /usr/include/stdc-predef.h \
@@ -1775,11 +1775,33 @@ CMakeFiles/MSF.dir/MSF/util.cc.o: MSF/util.cc \
 
 MSF/thread.cc:
 
+/usr/include/bits/syscall.h:
+
+/usr/include/sys/syscall.h:
+
+/usr/include/c++/4.8.2/bits/fstream.tcc:
+
+/usr/include/c++/4.8.2/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/c++/4.8.2/fstream:
+
+MSF/log.h:
+
+/usr/include/semaphore.h:
+
+/usr/include/c++/4.8.2/chrono:
+
+MSF/thread.h:
+
 /usr/include/c++/4.8.2/unordered_set:
 
 /usr/include/c++/4.8.2/bits/hashtable.h:
 
 /usr/local/include/yaml-cpp/node/emit.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h:
+
+/usr/include/c++/4.8.2/bits/atomic_base.h:
 
 /usr/local/include/yaml-cpp/node/detail/node_ref.h:
 
@@ -1792,6 +1814,16 @@ MSF/thread.cc:
 /usr/local/include/yaml-cpp/node/node.h:
 
 /usr/local/include/yaml-cpp/traits.h:
+
+/usr/include/c++/4.8.2/bits/stl_multimap.h:
+
+/usr/include/c++/4.8.2/bits/stl_map.h:
+
+/usr/include/c++/4.8.2/map:
+
+/usr/include/c++/4.8.2/bits/stl_tree.h:
+
+/usr/include/c++/4.8.2/bits/stl_list.h:
 
 /usr/local/include/yaml-cpp/stlemitter.h:
 
@@ -1806,38 +1838,6 @@ MSF/thread.cc:
 /usr/local/include/yaml-cpp/parser.h:
 
 /usr/local/include/yaml-cpp/yaml.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdbool.h:
-
-/usr/include/c++/4.8.2/bits/atomic_base.h:
-
-/usr/include/semaphore.h:
-
-/usr/include/c++/4.8.2/chrono:
-
-MSF/thread.h:
-
-/usr/include/bits/syscall.h:
-
-/usr/include/sys/syscall.h:
-
-/usr/include/c++/4.8.2/bits/stl_multimap.h:
-
-/usr/include/c++/4.8.2/bits/stl_map.h:
-
-/usr/include/c++/4.8.2/bits/stl_tree.h:
-
-/usr/include/c++/4.8.2/map:
-
-/usr/include/c++/4.8.2/bits/fstream.tcc:
-
-/usr/include/c++/4.8.2/x86_64-redhat-linux/bits/basic_file.h:
-
-/usr/include/c++/4.8.2/fstream:
-
-/usr/include/c++/4.8.2/bits/stl_list.h:
-
-MSF/log.h:
 
 /usr/include/boost/range/detail/misc_concept.hpp:
 
@@ -2647,9 +2647,9 @@ MSF/config.cc:
 
 /usr/include/c++/4.8.2/bits/postypes.h:
 
-/usr/local/include/yaml-cpp/emitterstyle.h:
-
 MSF/singleton.h:
+
+/usr/local/include/yaml-cpp/emitterstyle.h:
 
 /usr/include/bits/endian.h:
 
