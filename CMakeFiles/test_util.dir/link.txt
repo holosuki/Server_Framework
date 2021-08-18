@@ -1,0 +1,1 @@
+/usr/bin/c++  -rdynamic -O3 -fpic -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations CMakeFiles/test_util.dir/tests/test_util.cc.o -o bin/test_util  -Wl,-rpath,/home/holo/git/Server_Framework/lib lib/libMSF.so -lpthread /usr/local/lib64/libyaml-cpp.a 

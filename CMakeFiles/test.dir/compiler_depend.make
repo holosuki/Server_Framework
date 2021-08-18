@@ -103,6 +103,7 @@ CMakeFiles/test.dir/tests/test.cc.o: tests/test.cc \
   /usr/include/_G_config.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h \
   /usr/include/c++/4.8.2/cerrno \
   /usr/include/errno.h \
   /usr/include/bits/errno.h \
@@ -564,6 +565,8 @@ tests/test.cc:
 MSF/log.h:
 
 /usr/include/c++/4.8.2/bits/cxxabi_forced.h:
+
+/usr/include/bits/stdio.h:
 
 /usr/include/stdlib.h:
 

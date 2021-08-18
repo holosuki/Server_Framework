@@ -6,13 +6,17 @@ CXX_DEFINES = -DMSF_EXPORTS
 
 CXX_INCLUDES = -I/home/holo/git/Server_Framework/.
 
-CXX_FLAGS =  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-dev -fPIC
-
-# Custom defines: CMakeFiles/MSF.dir/MSF/log.cc.o_DEFINES = __FILE__="MSF/log.cc"
-
-# Custom defines: CMakeFiles/MSF.dir/MSF/util.cc.o_DEFINES = __FILE__="MSF/util.cc"
+CXX_FLAGS =  -rdynamic -O3 -fpic -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -fPIC
 
 # Custom defines: CMakeFiles/MSF.dir/MSF/config.cc.o_DEFINES = __FILE__="MSF/config.cc"
 
+# Custom defines: CMakeFiles/MSF.dir/MSF/fiber.cc.o_DEFINES = __FILE__="MSF/fiber.cc"
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/log.cc.o_DEFINES = __FILE__="MSF/log.cc"
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/scheduler.cc.o_DEFINES = __FILE__="MSF/scheduler.cc"
+
 # Custom defines: CMakeFiles/MSF.dir/MSF/thread.cc.o_DEFINES = __FILE__="MSF/thread.cc"
+
+# Custom defines: CMakeFiles/MSF.dir/MSF/util.cc.o_DEFINES = __FILE__="MSF/util.cc"
 

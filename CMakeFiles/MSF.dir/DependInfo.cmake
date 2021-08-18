@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/holo/git/Server_Framework/MSF/config.cc" "CMakeFiles/MSF.dir/MSF/config.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/config.cc.o.d"
+  "/home/holo/git/Server_Framework/MSF/fiber.cc" "CMakeFiles/MSF.dir/MSF/fiber.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/fiber.cc.o.d"
   "/home/holo/git/Server_Framework/MSF/log.cc" "CMakeFiles/MSF.dir/MSF/log.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/log.cc.o.d"
+  "/home/holo/git/Server_Framework/MSF/scheduler.cc" "CMakeFiles/MSF.dir/MSF/scheduler.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/scheduler.cc.o.d"
   "/home/holo/git/Server_Framework/MSF/thread.cc" "CMakeFiles/MSF.dir/MSF/thread.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/thread.cc.o.d"
   "/home/holo/git/Server_Framework/MSF/util.cc" "CMakeFiles/MSF.dir/MSF/util.cc.o" "gcc" "CMakeFiles/MSF.dir/MSF/util.cc.o.d"
   )

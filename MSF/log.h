@@ -20,7 +20,7 @@
 	if(logger->getLevel() <= level) \
 		MSF::LogEventWrap(MSF::LogEvent::ptr(new MSF::LogEvent(logger, level, \
 						__FILE__, __LINE__, 0, MSF::GetThreadId(), \
-					MSF::GetFiberId(), time(0)))).getSS()
+					MSF::GetFiberId(), time(0), MSF::Thread::GetName()))).getSS()
 
 #define MSF_LOG_DEBUG(logger) MSF_LOG_LEVEL(logger, MSF::LogLevel::DEBUG)
 #define MSF_LOG_INFO(logger) MSF_LOG_LEVEL(logger, MSF::LogLevel::INFO)
@@ -32,7 +32,7 @@
 	if(logger->getLevel() <= level) \
 		MSF::LogEventWrap(MSF::LogEvent::ptr(new MSF::LogEvent(logger, level, \
 						__FILE__, __LINE__, 0, MSF::GetThreadId(), \
-						MSF::GetFiberId(), time(0)))).getEvent()->format(fmt, __VA_ARGS__)
+						MSF::GetFiberId(), time(0), MSF::Thread::GetName()))).getEvent()->format(fmt, __VA_ARGS__)
 
 #define MSF_LOG_FMT_DEBUG(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::DEBUG, fmt, __VA_ARGS__)
 #define MSF_LOG_FMT_INFO(logger, fmt, ...) MSF_LOG_FMT_LEVEL(logger, MSF::LogLevel::INFO, fmt, __VA_ARGS__)
@@ -70,7 +70,8 @@ public:
 	typedef std::shared_ptr<LogEvent> ptr;
 	LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level,
 			const char* file, int32_t line, int32_t elapse,
-			uint32_t thread_id, uint32_t fiber_id, uint64_t time);
+			uint32_t thread_id, uint32_t fiber_id, uint64_t time,
+			const std::string& thread_name);
 
 	const char* getFile() const { return m_file;}
 	int32_t getLine() const { return m_line;}
@@ -78,6 +79,7 @@ public:
 	uint32_t getThreadId() const { return m_threadId;}
 	uint32_t getFiberId() const { return m_fiberId;}
 	uint64_t getTime() const { return m_time;}
+	const std::string& getThreadName() const { return m_threadName;}
 	std::string getContent() const { return m_ss.str();}
 	std::shared_ptr<Logger> getLogger() const { return m_logger;}
 	LogLevel::Level getLevel() const { return m_level;}
@@ -92,6 +94,7 @@ private:
 	uint32_t m_threadId = 0;			//线程id
 	uint32_t m_fiberId = 0;				//协程id
 	uint64_t m_time = 0;				//时间戳
+	std::string m_threadName;
 	std::stringstream m_ss;
 
 	std::shared_ptr<Logger> m_logger;

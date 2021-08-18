@@ -77,10 +77,10 @@ CMakeFiles/MSF.dir/MSF/thread.cc.o: \
  /usr/include/bits/stdlib-float.h /usr/include/c++/4.8.2/cstdio \
  /usr/include/libio.h /usr/include/_G_config.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /usr/include/c++/4.8.2/cerrno /usr/include/errno.h \
- /usr/include/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
- /usr/include/asm-generic/errno-base.h \
+ /usr/include/bits/stdio.h /usr/include/c++/4.8.2/cerrno \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/4.8.2/bits/functional_hash.h \
  /usr/include/c++/4.8.2/bits/basic_string.tcc \
  /usr/include/c++/4.8.2/bits/uses_allocator.h \

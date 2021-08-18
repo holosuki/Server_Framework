@@ -1,6 +1,9 @@
 /home/holo/git/Server_Framework/CMakeFiles/edit_cache.dir
+/home/holo/git/Server_Framework/CMakeFiles/test_fiber.dir
+/home/holo/git/Server_Framework/CMakeFiles/test_util.dir
 /home/holo/git/Server_Framework/CMakeFiles/test_config.dir
 /home/holo/git/Server_Framework/CMakeFiles/test_thread.dir
 /home/holo/git/Server_Framework/CMakeFiles/test.dir
 /home/holo/git/Server_Framework/CMakeFiles/rebuild_cache.dir
+/home/holo/git/Server_Framework/CMakeFiles/test_scheduler.dir
 /home/holo/git/Server_Framework/CMakeFiles/MSF.dir
