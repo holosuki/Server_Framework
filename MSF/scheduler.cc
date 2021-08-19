@@ -9,7 +9,8 @@ static MSF::Logger::ptr g_logger = MSF_LOG_NAME("system");
 static thread_local Scheduler* t_scheduler = nullptr;
 static thread_local Fiber* t_fiber = nullptr;
 
-Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name) {
+Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name)
+	:m_name(name) {
 	MSF_ASSERT(threads > 0);
 
 	if(use_caller) {
@@ -19,7 +20,7 @@ Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name) {
 		MSF_ASSERT(GetThis() == nullptr);
 		t_scheduler = this;
 
-		m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this)));
+		m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));
 		MSF::Thread::SetName(m_name);
 
 		t_fiber = m_rootFiber.get();
@@ -53,9 +54,9 @@ void Scheduler::start() {
 		return;
 	}
 	m_stopping = false;
-
 	MSF_ASSERT(m_threads.empty());
 
+	m_threads.resize(m_threadCount);
 	for(size_t i = 0; i < m_threadCount; ++i) {
 		m_threads[i].reset(new Thread(std::bind(&Scheduler::run, this)
 					, m_name + "_" + std::to_string(i)));
@@ -63,11 +64,11 @@ void Scheduler::start() {
 	}
 	lock.unlock();
 
-	if(m_rootFiber) {
+	/*if(m_rootFiber) {
 		m_rootFiber->call();
 		//m_rootFiber->swapIn();
 		MSF_LOG_INFO(g_logger) << "call out" << m_rootFiber->getState();
-	}
+	}*/
 }
 
 void Scheduler::stop() {
@@ -101,9 +102,21 @@ void Scheduler::stop() {
 		tickle();
 	}
 
-	if(stopping()) {
-		return;
+	if(m_rootFiber) {
+		if(!stopping()) {
+			m_rootFiber->call();
+		}
 	}
+	
+	std::vector<Thread::ptr> thrs;
+    {
+        MutexType::Lock lock(m_mutex);
+        thrs.swap(m_threads);
+    }
+
+    for(auto& i : thrs) {
+        i->join();
+    }
 
 	//if(exit_on_this_fiber) {
 
@@ -115,6 +128,7 @@ void Scheduler::setThis() {
 }
 
 void Scheduler::run() {
+	MSF_LOG_DEBUG(g_logger) << m_name << "run"; 
 	setThis();
 	if(MSF::GetThreadId() != m_rootThread) {
 		t_fiber = Fiber::GetThis().get();
@@ -127,6 +141,7 @@ void Scheduler::run() {
 	while(true) {
 		ft.reset();
 		bool tickle_me = false;
+		bool is_active = false;
 		{ //从消息队列中取出要执行的消息
 			MutexType::Lock lock(m_mutex);
 			auto it = m_fibers.begin();
@@ -144,8 +159,12 @@ void Scheduler::run() {
 				}
 
 				ft = *it;
-				m_fibers.erase(it);
+				m_fibers.erase(it++);
+				++m_activeThreadCount;
+				is_active = true;
+				break;
 			}
+			tickle_me |= it != m_fibers.end();
 		}
 
 		if(tickle_me) {
@@ -154,7 +173,6 @@ void Scheduler::run() {
 
 		if(ft.fiber && (ft.fiber->getState() != Fiber::TERM
 						&& ft.fiber->getState() != Fiber::EXCEPT)) {
-			++m_activeThreadCount;
 			ft.fiber->swapIn();
 			--m_activeThreadCount;
 
@@ -175,7 +193,6 @@ void Scheduler::run() {
 				cb_fiber.reset(new Fiber(ft.cb));
 			}
 			ft.reset();
-			++m_activeThreadCount;
 			cb_fiber->swapIn();
 			--m_activeThreadCount;
 			if(cb_fiber->getState() == Fiber::READY) {
@@ -192,6 +209,10 @@ void Scheduler::run() {
 			}
 		}
 		else {//没有任务执行idel
+			if(is_active) {
+				--m_activeThreadCount;
+				continue;
+			}
 			if(idle_fiber->getState() == Fiber::TERM) {
 				MSF_LOG_INFO(g_logger) << "idle fiber term";
 				break;
@@ -213,12 +234,16 @@ void Scheduler::tickle() {
 }
 
 bool Scheduler::stopping() {
+	MutexType::Lock lock(m_mutex);
 	return m_autoStop && m_stopping 
 		&& m_fibers.empty() && m_activeThreadCount == 0;
 }
 
 void Scheduler::idle() {
 	MSF_LOG_INFO(g_logger) << "idle";
+	while(!stopping()) {
+		MSF::Fiber::YieldToHold();
+	}
 }
 
 }
