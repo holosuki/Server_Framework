@@ -12,6 +12,8 @@ CXX_FLAGS =  -rdynamic -O3 -fpic -ggdb -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/MSF.dir/MSF/fiber.cc.o_DEFINES = __FILE__="MSF/fiber.cc"
 
+# Custom defines: CMakeFiles/MSF.dir/MSF/iomanager.cc.o_DEFINES = __FILE__="MSF/iomanager.cc"
+
 # Custom defines: CMakeFiles/MSF.dir/MSF/log.cc.o_DEFINES = __FILE__="MSF/log.cc"
 
 # Custom defines: CMakeFiles/MSF.dir/MSF/scheduler.cc.o_DEFINES = __FILE__="MSF/scheduler.cc"

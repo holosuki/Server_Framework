@@ -120,6 +120,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -257,6 +270,30 @@ MSF/fiber.s: MSF/fiber.cc.s
 MSF/fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/fiber.cc.s
 .PHONY : MSF/fiber.cc.s
+
+MSF/iomanager.o: MSF/iomanager.cc.o
+.PHONY : MSF/iomanager.o
+
+# target to build an object file
+MSF/iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/iomanager.cc.o
+.PHONY : MSF/iomanager.cc.o
+
+MSF/iomanager.i: MSF/iomanager.cc.i
+.PHONY : MSF/iomanager.i
+
+# target to preprocess a source file
+MSF/iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/iomanager.cc.i
+.PHONY : MSF/iomanager.cc.i
+
+MSF/iomanager.s: MSF/iomanager.cc.s
+.PHONY : MSF/iomanager.s
+
+# target to generate assembly for a file
+MSF/iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/iomanager.cc.s
+.PHONY : MSF/iomanager.cc.s
 
 MSF/log.o: MSF/log.cc.o
 .PHONY : MSF/log.o
@@ -426,6 +463,30 @@ tests/test_fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_iomanager.o: tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.o
+
+# target to build an object file
+tests/test_iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.cc.o
+
+tests/test_iomanager.i: tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.i
+
+# target to preprocess a source file
+tests/test_iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.cc.i
+
+tests/test_iomanager.s: tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.s
+
+# target to generate assembly for a file
+tests/test_iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.cc.s
+
 tests/test_scheduler.o: tests/test_scheduler.cc.o
 .PHONY : tests/test_scheduler.o
 
@@ -510,6 +571,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_thread"
 	@echo "... test_util"
@@ -519,6 +581,9 @@ help:
 	@echo "... MSF/fiber.o"
 	@echo "... MSF/fiber.i"
 	@echo "... MSF/fiber.s"
+	@echo "... MSF/iomanager.o"
+	@echo "... MSF/iomanager.i"
+	@echo "... MSF/iomanager.s"
 	@echo "... MSF/log.o"
 	@echo "... MSF/log.i"
 	@echo "... MSF/log.s"
@@ -540,6 +605,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_iomanager.o"
+	@echo "... tests/test_iomanager.i"
+	@echo "... tests/test_iomanager.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"

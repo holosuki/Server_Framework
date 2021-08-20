@@ -61,6 +61,7 @@ protected:
 	virtual void idle();//协程调度器没有任务，但是还不能销毁线程，这时就做这个idle
 
 	void setThis();
+	 bool hasIdleThreads() { return m_idleThreadCount > 0;}
 private:
 	template<class FiberOrCb>
 	bool schedulerNoLock(FiberOrCb fc, int thread) {

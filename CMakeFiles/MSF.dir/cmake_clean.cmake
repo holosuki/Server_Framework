@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MSF.dir/MSF/config.cc.o.d"
   "CMakeFiles/MSF.dir/MSF/fiber.cc.o"
   "CMakeFiles/MSF.dir/MSF/fiber.cc.o.d"
+  "CMakeFiles/MSF.dir/MSF/iomanager.cc.o"
+  "CMakeFiles/MSF.dir/MSF/iomanager.cc.o.d"
   "CMakeFiles/MSF.dir/MSF/log.cc.o"
   "CMakeFiles/MSF.dir/MSF/log.cc.o.d"
   "CMakeFiles/MSF.dir/MSF/scheduler.cc.o"
