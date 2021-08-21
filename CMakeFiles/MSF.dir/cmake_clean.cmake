@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MSF.dir/MSF/scheduler.cc.o.d"
   "CMakeFiles/MSF.dir/MSF/thread.cc.o"
   "CMakeFiles/MSF.dir/MSF/thread.cc.o.d"
+  "CMakeFiles/MSF.dir/MSF/timer.cc.o"
+  "CMakeFiles/MSF.dir/MSF/timer.cc.o.d"
   "CMakeFiles/MSF.dir/MSF/util.cc.o"
   "CMakeFiles/MSF.dir/MSF/util.cc.o.d"
   "lib/libMSF.pdb"

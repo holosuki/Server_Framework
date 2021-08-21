@@ -783,6 +783,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: tests/test_iomanager.cc
   MSF/macro.h \
   MSF/scheduler.h \
   MSF/iomanager.h \
+  MSF/timer.h \
   /usr/include/sys/socket.h \
   /usr/include/sys/uio.h \
   /usr/include/bits/uio.h \
@@ -830,6 +831,8 @@ MSF/macro.h:
 /usr/include/bits/syscall.h:
 
 /usr/include/sys/syscall.h:
+
+MSF/timer.h:
 
 /usr/include/c++/4.8.2/bits/fstream.tcc:
 

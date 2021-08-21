@@ -54,7 +54,7 @@ void test1() {
     iom.scheduler(&test_fiber);
 }
 
-/*MSF::Timer::ptr s_timer;
+MSF::Timer::ptr s_timer;
 void test_timer() {
     MSF::IOManager iom(2);
     s_timer = iom.addTimer(1000, [](){
@@ -65,11 +65,11 @@ void test_timer() {
             //s_timer->cancel();
         }
     }, true);
-}*/
+}
 
 int main(int argc, char** argv) {
-    test1();
-    //test_timer();
+    //test1();
+    test_timer();
     return 0;
 }
 

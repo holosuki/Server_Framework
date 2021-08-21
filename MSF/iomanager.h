@@ -2,10 +2,11 @@
 #define __MSF_IOMANAGER_H__
 
 #include "scheduler.h"
+#include "timer.h"
 
 namespace MSF {
 
-class IOManager : public Scheduler {
+class IOManager : public Scheduler, public TimerManager {
 public:
 	typedef std::shared_ptr<IOManager> ptr;
 	typedef RWMutex RWMutexType;
@@ -52,9 +53,11 @@ protected:
 	void tickle() override;
 	bool stopping() override;
 	void idle() override;
+	void onTimerInsertedAtFront() override;
 
 	void contextResize(size_t size);
 
+	bool stopping(uint64_t& timeout);
 private:
 	int m_epfd = 0;	//epoll fd
 	int m_tickleFds[2];

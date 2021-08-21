@@ -152,7 +152,7 @@ void TimerManager::listExpiredCb(std::vector<std::function<void()> >& cbs) {
     }
 
     Timer::ptr now_timer(new Timer(now_ms));
-    auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer);
+    auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer);	//这里可以用upper_bound
     while(it != m_timers.end() && (*it)->m_next == now_ms) {
         ++it;
     }

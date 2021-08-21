@@ -45,7 +45,7 @@ public:
 		{
 			MutexType::Lock lock(m_mutex);
 			while(begin != end) {
-				need_tickle = schedulerNoLock(&*begin) || need_tickle;
+				need_tickle = schedulerNoLock(&*begin, -1) || need_tickle;
 				++begin;
 			}
 		}
@@ -53,6 +53,9 @@ public:
 			tickle();
 		}
 	}
+
+	void switchTo(int thread = -1);
+    std::ostream& dump(std::ostream& os);
 
 protected:
 	virtual void tickle();
@@ -124,6 +127,14 @@ protected:
 	int m_rootThread = 0;
 
 };
+
+//class SchedulerSwitcher : public Noncopyable {
+//public:
+//    SchedulerSwitcher(Scheduler* target = nullptr);
+//    ~SchedulerSwitcher();
+//private:
+//    Scheduler* m_caller;
+//};
 
 }
 

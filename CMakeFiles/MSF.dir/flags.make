@@ -20,5 +20,7 @@ CXX_FLAGS =  -rdynamic -O3 -fpic -ggdb -std=c++11 -Wall -Wno-deprecated -Werror 
 
 # Custom defines: CMakeFiles/MSF.dir/MSF/thread.cc.o_DEFINES = __FILE__="MSF/thread.cc"
 
+# Custom defines: CMakeFiles/MSF.dir/MSF/timer.cc.o_DEFINES = __FILE__="MSF/timer.cc"
+
 # Custom defines: CMakeFiles/MSF.dir/MSF/util.cc.o_DEFINES = __FILE__="MSF/util.cc"
 

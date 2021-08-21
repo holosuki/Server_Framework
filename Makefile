@@ -367,6 +367,30 @@ MSF/thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/thread.cc.s
 .PHONY : MSF/thread.cc.s
 
+MSF/timer.o: MSF/timer.cc.o
+.PHONY : MSF/timer.o
+
+# target to build an object file
+MSF/timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/timer.cc.o
+.PHONY : MSF/timer.cc.o
+
+MSF/timer.i: MSF/timer.cc.i
+.PHONY : MSF/timer.i
+
+# target to preprocess a source file
+MSF/timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/timer.cc.i
+.PHONY : MSF/timer.cc.i
+
+MSF/timer.s: MSF/timer.cc.s
+.PHONY : MSF/timer.s
+
+# target to generate assembly for a file
+MSF/timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MSF.dir/build.make CMakeFiles/MSF.dir/MSF/timer.cc.s
+.PHONY : MSF/timer.cc.s
+
 MSF/util.o: MSF/util.cc.o
 .PHONY : MSF/util.o
 
@@ -593,6 +617,9 @@ help:
 	@echo "... MSF/thread.o"
 	@echo "... MSF/thread.i"
 	@echo "... MSF/thread.s"
+	@echo "... MSF/timer.o"
+	@echo "... MSF/timer.i"
+	@echo "... MSF/timer.s"
 	@echo "... MSF/util.o"
 	@echo "... MSF/util.i"
 	@echo "... MSF/util.s"

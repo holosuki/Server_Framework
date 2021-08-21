@@ -18,6 +18,7 @@ set(LIB_SRC
 	MSF/log.cc
 	MSF/scheduler.cc
 	MSF/thread.cc
+	MSF/timer.cc
 	MSF/util.cc
 	)
 
